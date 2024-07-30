@@ -3,51 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O'FOUR</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>O'FOUR - Blog collaboratif de cuisine</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="menu-burger">☰</div>
-        <h1>O'FOUR</h1>
-    </header>
-    <nav class="mobile-menu">
-        <ul class="">
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Recettes de saison</a></li>
-            <li><a href="#">Entrées</a></li>
-            <li><a href="#">Plats</a></li>
-            <li><a href="#">Desserts</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section class="edito">
-            <h2>Edito</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod fugit molestias deserunt amet possimus aliquid rerum vel optio ab reprehenderit repellendus asperiores, quis iste ipsa! Vel ducimus repellendus corrupti illo!</p>
-        </section>
-        <button class="propose-recipe">Proposer une recette</button>
-        <div class="search-bar">
-            <input type="text" placeholder="Rechercher une recette">
-            <button>Search</button>
+    <header class="header">
+        <div class="header__logo">
+            <img class="header__logo-img" src="./images/four.png" alt="Logo O'Four">
+            <div class="header__logo-title">O'FOUR</div>
         </div>
-        <section class="random-recipe">
-            <h2>Tartiflette</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod fugit molestias deserunt amet possimus aliquid rerum vel optio ab reprehenderit repellendus asperiores, quis iste ipsa!</p>
-            <a href="#">Read more...</a>
-        </section>
-        <nav class="links">
-            <a href="#">Dernières recettes</a>
-            <a href="#">Recettes les mieux notées</a>
+        <nav class="header__nav">
+            <button class="header__nav-toggle" aria-expanded="false" aria-controls="main-menu">
+                <span class="sr-only">Menu</span>
+                <span aria-hidden="true">☰</span>
+            </button>
+            <ul class="header__nav-menu" id="main-menu">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#seasonal">Recettes de saison</a></li>
+                <li><a href="#starters">Entrées</a></li>
+                <li><a href="#mains">Plats</a></li>
+                <li><a href="#desserts">Desserts</a></li>
+            </ul>
         </nav>
+    </header>
+
+    <main class="main">
+        <section class="info">
+            <h1 class="info__title">O'FOUR</h1>
+            <p class="info__subtitle">Un blog collaboratif pour tout ceux qui aiment cuisiner</p>
+        </section>
+
+        <section class="editorial">
+            <h2 class="editorial__title">Édito</h2>
+            <p class="editorial__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod non perdidicit, non praecise agere non possit. Quae cum ita sint, effectum est nihil esse malum, quod turpe non sit.</p>
+        </section>
+
+        <section class="actions">
+            <button class="actions__button">Proposer une recette</button>
+            <form class="search" role="search">
+                <input type="search" class="search__input" placeholder="Rechercher une recette">
+                <button type="submit" class="search__button">Search</button>
+            </form>
+        </section>
+
+        <section class="featured-recipe">
+            <h2 class="featured-recipe__title">Tartiflette</h2>
+            <img src="./images/tartiflette-1.jpg" alt="Photo de la tartiflette" class="featured-recipe__image">
+            <div class="featured-recipe__content">
+                <ul class="featured-recipe__ingredients">
+                    <li><h3>Ingrédients</h3></li>
+                    <li>1 reblochon</li>
+                    <li>1 kg de pommes de terre</li>
+                    <li>200g de lardons fumés</li>
+                    <li>2 gros oignons</li>
+                    <li>10 cl de vin blanc</li>
+                    <li>Poivre noir</li>
+                    <li>En option: noix de muscade rapée</li>
+            </ul>
+                <ul class="featured-recipe__meta">
+                    <li>Difficulté : facile</li>
+                    <li>Pour 4 personnes</li>
+                    <li>Temps de préparation: 25 min</li>
+                    <li>Temps de cuisson: 20 min</li>
+                </ul>
+            </div>
+            
+            <p class="featured-recipe__description">
+                <h3>Instructions</h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod non perdidicit, non praecise agere non possit.</p>
+            <a href="#" class="featured-recipe__link">Lire plus<span class="sr-only">sur la recette de Tartiflette</span></a>
+        </section>
+
+        <div class="recipe-lists">
+        <section class="recipe-list">
+            <h2 class="recipe-list__title">Dernières recettes</h2>
+            <ul class="recipe-list__items">
+                <li><a href="#">Recette 1</a></li>
+                <li><a href="#">Recette 2</a></li>
+                <li><a href="#">Recette 3</a></li>
+                <li><a href="#">Recette 4</a></li>
+                <li><a href="#">Recette 5</a></li>
+            </ul>
+        </section>
+
+        <section class="recipe-list">
+            <h2 class="recipe-list__title">Recettes les mieux notées</h2>
+            <ul class="recipe-list__items">
+                <li><a href="#">Recette 1</a></li>
+                <li><a href="#">Recette 2</a></li>
+                <li><a href="#">Recette 3</a></li>
+                <li><a href="#">Recette 4</a></li>
+                <li><a href="#">Recette 5</a></li>
+            </ul>
+        </section>
+    </div>
     </main>
-    <footer>
-        <a href="#">Contactez-nous</a>
-        <a href="#">Mentions légales</a>
-        <div class="social-media">
-            <a href="#">🐦</a>
-            <a href="#">📘</a>
-            <a href="#">📸</a>
-        </div>
+
+    <footer class="footer">
+        <ul class="footer__social">
+            <li><a href="#" aria-label="Facebook">Facebook</a></li>
+            <li><a href="#" aria-label="Twitter">Twitter</a></li>
+            <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        </ul>
+        <ul class="footer__links">
+            <li><a href="#">Contactez-nous</a></li>
+            <li><a href="#">Proposer une recette</a></li>
+            <li><a href="#">Mentions légales</a></li>
+        </ul>
     </footer>
 </body>
 </html>
