@@ -92,6 +92,13 @@ a {
     margin-bottom: 2rem;
 }
 
+.info, .editorial {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 /* Style des boutons et du champ de recherche */
 .actions__button {
     display: block;
